@@ -193,12 +193,15 @@ h. Deactivate our virtual enviroment
 ~ $ sudo nano /var/www/itemcatalog/itemcatalog.wsgi
 ```
 * and we will need to add the following content inside
-> import sys
+```sh
+import sys
 sys.path.insert(0, '/var/www/itemcatalog/itemcatalog')
 #activate_this is for activate the packages for virtual environment
 activate_this = '/var/www/itemcatalog/itemcatalog/venv/bin/activate_this.py'
 execfile(activate_this, dict(__file__=activate_this))
 from project import app as application
+```
+
 * create a new configuration file for our applications virtual host by running
 ```sh
 ~ $ sudo nano /etc/apache2/sites-available/itemcatalog.conf
