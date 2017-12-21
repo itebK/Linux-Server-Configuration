@@ -204,7 +204,9 @@ from project import app as application
 ~ $ sudo nano /etc/apache2/sites-available/itemcatalog.conf
 ```
 * and add the following content inside
-> <VirtualHost *:80>
+
+```sh
+<VirtualHost *:80>
   ServerName ubuntu-512mb-nyc3-01
   ServerAlias 104.131.87.6
   ServerAdmin local@local
@@ -213,7 +215,7 @@ from project import app as application
       Order allow,deny
       Allow from all
   </Directory>
-  Alias /static /var/www/itemcatalog/itemcatalog/static
+ Alias /static /var/www/itemcatalog/itemcatalog/static
   <Directory /var/www/itemcatalog/itemcatalog/static/>
       Order allow,deny
       Allow from all
@@ -221,6 +223,7 @@ from project import app as application
   ErrorLog ${APACHE_LOG_DIR}/error.log
   CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
+```
 * Enable our virtual host.
 ```sh
 ~ $ sudo a2ensite itemcatalog
