@@ -75,7 +75,7 @@
 #find the following line
 root    ALL=(ALL:ALL) ALL
 #and add the following line to give the grader sudo permission
-root    ALL=(ALL:ALL) NOPASSWD:ALL
+grader    ALL=(ALL:ALL) NOPASSWD:ALL
 ```
 * Setup an SSH key for the grader by using the **ssh-keygen**.
 ```sh
