@@ -26,7 +26,10 @@
 ##### 1. Create a new server
 * Start a new Ubuntu Linux server on DigitalOcean.
 * Use DigitalOcean to access console(login as root)
-
+```sh
+~ $  sudo apt-get update # check for updates
+~ $ sudo apt-get -u upgrade # checks list of updates and upgrade it
+```
 ##### 2. Initial setup and secure  the server
 * Set the Timezone to UTC using the following code
 ```sh
